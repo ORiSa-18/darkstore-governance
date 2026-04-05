@@ -2,6 +2,22 @@
 
 This folder consolidates the darkstore research work into one place.
 
+## Repository Placement
+
+Clone the Hyperledger Fabric samples repository first:
+
+```bash
+git clone https://github.com/hyperledger/fabric-samples.git
+```
+
+Add this project inside the cloned `fabric-samples` repository as:
+
+```text
+fabric-samples/darkstore-governance/
+```
+
+The README commands assume this exact placement so the project can reuse `test-network/`.
+
 ## What Each Folder Does
 
 - `chaincode/`
