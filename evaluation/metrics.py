@@ -86,6 +86,16 @@ RESULT_HEADERS = {
         "history_size",
         "notes",
     ],
+    "centralized_baseline.csv": [
+        "timestamp_utc",
+        "mode",
+        "workload_orders",
+        "avg_store_event_ms",
+        "avg_verify_sla_ms",
+        "throughput_tps",
+        "sla_accuracy",
+        "notes",
+    ],
 }
 
 
