@@ -1,0 +1,4 @@
+timestamp_utc,experiment,workload_orders,transactions_submitted,transactions_succeeded,total_duration_ms,throughput_tps,notes
+2026-03-16T15:29:33.084234+00:00,throughput,10,10,10,21419.121,0.4668725668060794,mean_latency_ms=2141.03
+2026-03-16T15:33:07.821838+00:00,throughput,100,100,100,214690.106,0.4657876502236205,mean_latency_ms=2146.36
+2026-03-16T16:15:46.592393+00:00,throughput,1000,1000,1000,2558720.843,0.39082028144482506,mean_latency_ms=2120.53

@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://hyperledger.jfrog.io/artifactory/fabric-maven"
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+    withJavadocJar()
+    withSourcesJar()
+}
+
+dependencies {
+    implementation('org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.5.5') {
+        exclude group: 'com.github.everit-org.json-schema', module: 'org.everit.json.schema'
+    }
+    runtimeOnly 'com.github.erosb:everit-json-schema:1.14.6'
+    implementation 'com.owlike:genson:1.6'
+
+    testImplementation 'junit:junit:4.13.2'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('jar') {
+    manifest {
+        attributes(
+            'Main-Class': 'org.hyperledger.fabric.contract.ContractRouter'
+        )
+    }
+}
+
+application {
+    applicationName = 'darkstore'
+    mainClass = 'org.hyperledger.fabric.contract.ContractRouter'
+}
+
+tasks.named('build') {
+    dependsOn tasks.named('installDist')
+}
+
+test {
+    useJUnit()
+}

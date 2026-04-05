@@ -1,0 +1,18 @@
+{
+  "base_timestamp_ms": 1710600000000,
+  "block_time_samples": 10,
+  "chaincode_name": "darkstore",
+  "chaincode_path": "/Users/sameerodeyar/Documents/GitHub/blockchain-q-com/fabric-samples/chaincode/darkstore-java",
+  "channel_name": "mychannel",
+  "fault_tolerance_samples": 6,
+  "latency_samples": 20,
+  "network_dir": "/Users/sameerodeyar/Documents/GitHub/blockchain-q-com/fabric-samples/test-network",
+  "repo_root": "/Users/sameerodeyar/Documents/GitHub/blockchain-q-com/fabric-samples",
+  "results_dir": "/Users/sameerodeyar/Documents/GitHub/blockchain-q-com/fabric-samples/evaluation/results",
+  "sla_samples_per_scenario": 5,
+  "workloads": [
+    10,
+    100,
+    1000
+  ]
+}
